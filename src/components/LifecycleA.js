@@ -11,7 +11,7 @@ export class LifecycleA extends Component {
     console.log("LifecycleA constructor");
   }
 
-  static getDerivedStateFromProps(propsm, state) {
+  static getDerivedStateFromProps(props, state) {
     console.log("LifecycleA getDerivedStateFromProps");
     return null;
   }
