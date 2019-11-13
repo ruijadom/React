@@ -43,11 +43,11 @@ export class LifecycleA extends Component {
   render() {
     console.log("LifecycleA render");
     return (
-      <div>
+      <>
         <div>LifecycleA</div>
         <button onClick={this.changeState}>change state</button>
         <LifecycleB></LifecycleB>
-      </div>
+      </>
     );
   }
 }
