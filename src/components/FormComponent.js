@@ -28,6 +28,10 @@ export class FormComponent extends Component {
         notes: event.target.value
       });
     };
+
+    this.handleSubmit = () => {
+      alert(`${this.state.user} ${this.state.skill} ${this.state.notes}`)
+    }
   }
 
   render() {
@@ -35,7 +39,7 @@ export class FormComponent extends Component {
       <>
         <Card style={{ width: "18rem", margin: "50px auto" }}>
           <Card.Body>
-            <Form>
+            <Form onSubmit={this.handleSubmit}>
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>User</Form.Label>
                 <Form.Control
