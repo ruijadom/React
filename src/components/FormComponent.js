@@ -29,6 +29,10 @@ export class FormComponent extends Component {
   };
 
   render() {
+
+    const { email, password } = this.state;
+    const isEnabled = email.length > 0 && password.length > 0;
+
     return (
       <>
         <Card style={{ width: "18rem", margin: "50px auto" }}>
@@ -39,7 +43,7 @@ export class FormComponent extends Component {
                 <Form.Control
                   type="email"
                   placeholder="Enter email"
-                  value={this.state.email}
+                  value={email}
                   onChange={this.handleEmail}
                 />
                 <Form.Text className="text-muted">
@@ -52,16 +56,15 @@ export class FormComponent extends Component {
                 <Form.Control
                   type="password"
                   placeholder="Password"
-                  value={this.state.password}
+                  value={password}
                   onChange={this.handlePassword}
                 />
               </Form.Group>
-              <Form.Group controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-              </Form.Group>
-              <Button variant="primary" type="submit">
+
+              <Button disabled={!isEnabled} variant="primary" type="submit">
                 Submit
               </Button>
+              
             </Form>
           </Card.Body>
         </Card>
