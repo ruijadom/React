@@ -39,6 +39,8 @@ export class FormComponent extends Component {
           <Card.Body>
             <Form onSubmit={this.handleSubmit}>
               <Form.Group controlId="formBasicEmail">
+                <h3>Register</h3>
+                <hr></hr>
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
                   type="email"
@@ -61,10 +63,10 @@ export class FormComponent extends Component {
                 />
               </Form.Group>
 
-              <Button disabled={!isEnabled} variant="primary" type="submit">
-                Submit
+              <Button disabled={!isEnabled} variant="success" type="submit">
+                Register
               </Button>
-              
+
             </Form>
           </Card.Body>
         </Card>
