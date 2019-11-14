@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Button, Form, Card } from "react-bootstrap";
 
+import Cookies from 'universal-cookie';
+ const cookies = new Cookies();
+
 export class FormComponent extends Component {
   constructor(props) {
     super(props);
@@ -23,9 +26,19 @@ export class FormComponent extends Component {
     });
   };
 
-  handleSubmit = () => {
+  handleSubmit = (event) => {
     const { email, password } = this.state;
-    alert(`Signed up with email: ${email} password: ${password}`);
+    const data = {
+      email,
+      password
+    }
+
+    cookies.set('session', data, { path: '/' });
+    
+    console.log(cookies.get('session')); // Pacman
+
+    event.preventDefault()
+
   };
 
   render() {
