@@ -6,33 +6,27 @@ export class FormComponent extends Component {
     super(props);
 
     this.state = {
-      user: "Ruijadom",
-      skill: "React",
-      notes: ""
+      email: "",
+      password: ""
     };
-
-    this.handleName = event => {
-      this.setState({
-        user: event.target.value
-      });
-    };
-
-    this.handleSkill = event => {
-      this.setState({
-        skill: event.target.value
-      });
-    };
-
-    this.handleNotes = event => {
-      this.setState({
-        notes: event.target.value
-      });
-    };
-
-    this.handleSubmit = () => {
-      alert(`${this.state.user} ${this.state.skill} ${this.state.notes}`)
-    }
   }
+
+  handleEmail = event => {
+    this.setState({
+      email: event.target.value
+    });
+  };
+
+  handlePassword = event => {
+    this.setState({
+      password: event.target.value
+    });
+  };
+
+  handleSubmit = () => {
+    const { email, password } = this.state;
+    alert(`Signed up with email: ${email} password: ${password}`);
+  };
 
   render() {
     return (
@@ -41,38 +35,30 @@ export class FormComponent extends Component {
           <Card.Body>
             <Form onSubmit={this.handleSubmit}>
               <Form.Group controlId="formBasicEmail">
-                <Form.Label>User</Form.Label>
+                <Form.Label>Email address</Form.Label>
                 <Form.Control
-                  type="text"
-                  value={this.state.user}
-                  onChange={this.handleName}
+                  type="email"
+                  placeholder="Enter email"
+                  value={this.state.email}
+                  onChange={this.handleEmail}
+                />
+                <Form.Text className="text-muted">
+                  We'll never share your email with anyone else.
+                </Form.Text>
+              </Form.Group>
+
+              <Form.Group controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.handlePassword}
                 />
               </Form.Group>
-
-              <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Label>Skill</Form.Label>
-                <Form.Control
-                  as="select"
-                  value={this.state.skill}
-                  onChange={this.handleSkill}
-                >
-                  <option value="React">React</option>
-                  <option value="Angular">Angular</option>
-                  <option value="Vue">Vue</option>
-                  <option value="Other">Other</option>
-                </Form.Control>
+              <Form.Group controlId="formBasicCheckbox">
+                <Form.Check type="checkbox" label="Check me out" />
               </Form.Group>
-
-              <Form.Group controlId="exampleForm.ControlTextarea1">
-                <Form.Label>Example textarea</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows="3"
-                  value={this.state.notes}
-                  onChange={this.handleNotes}
-                />
-              </Form.Group>
-
               <Button variant="primary" type="submit">
                 Submit
               </Button>
