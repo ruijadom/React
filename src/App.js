@@ -4,6 +4,7 @@ import LifecycleA from "./components/LifecycleA";
 import FormComponent from "./components/FormComponent";
 import PureComponent from "./components/PureComponent";
 import ParentComp from "./components/ParentComponent";
+import RefsDemo from "./components/RefsDemo";
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
     <div className="App">
       {/*<FormComponent></FormComponent>*/}
       {/*<LifecycleA></LifecycleA>*/}
-      <ParentComp></ParentComp>
+      {/*<ParentComp></ParentComp>*/}
+      <RefsDemo></RefsDemo>
     </div>
   );
 }
