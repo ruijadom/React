@@ -10,7 +10,17 @@ export class FormComponent extends Component {
 
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      list: [
+        {id: 0, name: "name01"},
+        {id: 1, name: "name02"},
+        {id: 2, name: "name03"},
+        {id: 3, name: "name04"},
+        {id: 4, name: "name05"},
+        {id: 5, name: "name06"},
+        {id: 6, name: "name07"},
+        {id: 7, name: "name08"}
+      ]
     };
   }
 
@@ -40,6 +50,12 @@ export class FormComponent extends Component {
     event.preventDefault()
 
   };
+
+  handleChange = (i, event) => {
+    const values = [...this.state.list];
+    this.state.list[i].name = event.target.value;
+    this.setState(values);
+  }
 
   render() {
 
