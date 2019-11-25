@@ -41,3 +41,12 @@
 
 - _static getDerivedStateFromError_
 - _componentDidCatch_
+
+
+## Pure Component vs Regular Component
+
+### Regular Component
+A regular component does not implement the _shouldComponentUpdate_ method. It always returns true by default.
+
+### Pure Component
+A pure component implements _shouldComponentUpdate_ with a shallow props and state comparison.
