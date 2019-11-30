@@ -7,6 +7,7 @@ import ParentComp from "./components/ParentComponent";
 import RefsDemo from "./components/RefsDemo";
 import FRInput from "./components/FRInput";
 import FRParentInput from "./components/FRParentInput";
+import PortalDemo from "./components/PortalDemo";
 
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
       {/*<LifecycleA></LifecycleA>*/}
       {/*<ParentComp></ParentComp>*/}
       {/*<RefsDemo></RefsDemo>*/}
-      <FRParentInput></FRParentInput>
+      {/*<FRParentInput></FRParentInput>*/}
+      <PortalDemo></PortalDemo>
     </div>
   );
 }
