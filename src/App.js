@@ -6,7 +6,7 @@ import ClickCounter from "./components/ClickCounter";
 function App() {
   return (
     <div className="App">
-      <ClickCounter></ClickCounter>
+      <ClickCounter name="Ruijadom"></ClickCounter>
       <HoverCounter></HoverCounter>
     </div>
   );
