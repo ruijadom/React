@@ -8,6 +8,8 @@ import RefsDemo from "./components/RefsDemo";
 import FRInput from "./components/FRInput";
 import FRParentInput from "./components/FRParentInput";
 import PortalDemo from "./components/PortalDemo";
+import ClickCounterTwo from "./components/ClickCounterTwo";
+import HoverCounterTwo from "./components/HoverCounterTwo";
 
 
 function App() {
@@ -20,7 +22,9 @@ function App() {
       {/*<ParentComp></ParentComp>*/}
       {/*<RefsDemo></RefsDemo>*/}
       {/*<FRParentInput></FRParentInput>*/}
-      <PortalDemo></PortalDemo>
+      {/*<PortalDemo></PortalDemo>*/}
+      <HoverCounterTwo></HoverCounterTwo>
+      <ClickCounterTwo></ClickCounterTwo>
     </div>
   );
 }
