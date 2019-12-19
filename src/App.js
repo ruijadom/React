@@ -13,8 +13,6 @@ import HoverCounterTwo from "./components/HoverCounterTwo";
 
 
 function App() {
-
-
   return (
     <div className="App">
       {/*<FormComponent></FormComponent>*/}
