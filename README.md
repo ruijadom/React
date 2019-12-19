@@ -50,3 +50,6 @@ A regular component does not implement the _shouldComponentUpdate_ method. It al
 
 ### Pure Component
 A pure component implements _shouldComponentUpdate_ with a shallow props and state comparison.
+
+### Render props
+The term "render prop" refers to a technique for *sharing code* between components using a *prop whose value is a function*.
