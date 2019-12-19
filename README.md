@@ -53,3 +53,5 @@ A pure component implements _shouldComponentUpdate_ with a shallow props and sta
 
 ### Render props
 The term "render prop" refers to a technique for *sharing code* between components using a *prop whose value is a function*.
+
+test
