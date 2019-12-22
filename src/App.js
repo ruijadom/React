@@ -1,24 +1,28 @@
 import React, { Component } from "react";
 import "./App.css";
-import LifecycleA from "./components/LifecycleA";
-import FormComponent from "./components/FormComponent";
-import PureComponent from "./components/PureComponent";
-import ParentComp from "./components/ParentComponent";
-import RefsDemo from "./components/RefsDemo";
-import FRInput from "./components/FRInput";
-import FRParentInput from "./components/FRParentInput";
-import PortalDemo from "./components/PortalDemo";
-import ClickCounterTwo from "./components/ClickCounterTwo";
-import HoverCounterTwo from "./components/HoverCounterTwo";
-import User from "./components/User";
-import Counter from "./components/Counter";
+//import LifecycleA from "./components/LifecycleA";
+//import FormComponent from "./components/FormComponent";
+//import PureComponent from "./components/PureComponent";
+//import ParentComp from "./components/ParentComponent";
+//import RefsDemo from "./components/RefsDemo";
+//import FRInput from "./components/FRInput";
+//import FRParentInput from "./components/FRParentInput";
+//import PortalDemo from "./components/PortalDemo";
+//import ClickCounterTwo from "./components/ClickCounterTwo";
+//import HoverCounterTwo from "./components/HoverCounterTwo";
+//import User from "./components/User";
+//import Counter from "./components/Counter";
 import ComponentC from "./components/ComponentC";
+import { UserProvider } from "./components/UserContext";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ComponentC></ComponentC>
+        <UserProvider value="Ruijadom">
+          <ComponentC></ComponentC>
+        </UserProvider>
+
         {/*<Counter
           render={(count, incrementCount) => (
             <ClickCounterTwo count={count} incrementCount={incrementCount} />
