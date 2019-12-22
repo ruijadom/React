@@ -12,12 +12,14 @@ import ClickCounterTwo from "./components/ClickCounterTwo";
 import HoverCounterTwo from "./components/HoverCounterTwo";
 import User from "./components/User";
 import Counter from "./components/Counter";
+import ComponentC from "./components/ComponentC";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Counter
+        <ComponentC></ComponentC>
+        {/*<Counter
           render={(count, incrementCount) => (
             <ClickCounterTwo count={count} incrementCount={incrementCount} />
           )}
@@ -26,7 +28,7 @@ class App extends Component {
           render={(count, incrementCount) => (
             <HoverCounterTwo count={count} incrementCount={incrementCount} />
           )}
-        />
+        />*/}
         {/*<FormComponent></FormComponent>*/}
         {/*<LifecycleA></LifecycleA>*/}
         {/*<ParentComp></ParentComp>*/}

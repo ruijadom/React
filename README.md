@@ -42,16 +42,20 @@
 - _static getDerivedStateFromError_
 - _componentDidCatch_
 
-
 ## Pure Component vs Regular Component
 
 ### Regular Component
+
 A regular component does not implement the _shouldComponentUpdate_ method. It always returns true by default.
 
 ### Pure Component
+
 A pure component implements _shouldComponentUpdate_ with a shallow props and state comparison.
 
 ### Render props
-The term "render prop" refers to a technique for *sharing code* between components using a *prop whose value is a function*.
 
-test
+The term "render prop" refers to a technique for _sharing code_ between components using a _prop whose value is a function_.
+
+### Context
+
+Context provides a way to pass data throught the component tree without having to pass props down manually at every level.
